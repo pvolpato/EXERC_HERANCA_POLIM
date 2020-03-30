@@ -1,10 +1,14 @@
-/* exercicio 2 */
-
 <?php
   class Animal{
     public $nome;
     public $idade;
     public $som;
+
+    public function __construct($nome, $idade, $som){
+      $this->nome=$nome;
+      $this->idade=$idade;
+      $this->som=$som;
+    }
 
     public function EmitirSom(){
       echo "O som que o animal emite é $this->som";
@@ -56,25 +60,15 @@
     }
   }
 
-  $cachorro = new Cachorro();
-  $cachorro->nome = "Totó";
-  $cachorro->idade = "3 anos";
-  $cachorro->setsom ("au! au!");
+  $cachorro = new Cachorro("Totó", 3, "au au");
   $cachorro->EmitirSom();
   echo "\n";
 
-  $cavalo = new Cavalo();
-  $cavalo->nome = "Zorro";
-  $cavalo->idade = "10 anos";
-  $cavalo->setsom("iiiiin hihihii");
+  $cavalo = new Cavalo("Zorro", 10, "iiiin hihihii");
   $cavalo->EmitirSom();
   echo "\n";
 
-
-  $preguica = new Preguica();
-  $preguica->nome = "Finnick";
-  $preguica->idade = "1 ano";
-  $preguica->setsom("zzzzz");
+  $preguica = new Preguica("Finnick", 1, "ZzZZzzZ");
   echo $preguica->EmitirSom();
   echo "\n";
   
