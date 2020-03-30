@@ -1,1 +1,61 @@
 /* exercício 3 */
+
+<?php
+  class Animal{
+    public $nome;
+    public $idade;
+    public $som;
+
+    public function setsom($som){
+      $this->som=$som;
+    }
+
+    public function getsom(){
+      return $this->som;
+    }
+
+  }
+
+  class Cachorro extends Animal{
+    public function Correr(){
+      echo "Correndo";
+    }
+
+    }
+  
+
+  class Cavalo extends Animal{
+    public function Correr(){
+      echo "Correndo";
+    }
+  }
+
+  class Preguica extends Animal{
+    public function SobeNaArvore(){
+      echo "Subindo na árvore";
+    }
+  }
+
+  $cachorro = new Cachorro();
+  $cachorro->nome = "Totó";
+  $cachorro->idade = "3 anos";
+  $cachorro->setsom("Au! Au!");
+  echo $cachorro->getsom();
+  echo "\n";
+
+  $cavalo = new Cavalo();
+  $cavalo->nome = "Zorro";
+  $cavalo->idade = "10 anos";
+  $cavalo->setsom("iiiiin hihihi");
+  echo $cavalo->getsom();
+  echo "\n";
+
+
+  $preguica = new Preguica();
+  $preguica->nome = "Finnick";
+  $preguica->idade = "1 ano";
+  $preguica->setsom("zzzzz");
+  echo $preguica->getsom();
+  echo "\n";
+  
+?>
