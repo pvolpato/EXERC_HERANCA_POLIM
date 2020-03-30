@@ -5,6 +5,15 @@
     public $nome;
     public $idade;
     public $som;
+    
+    public function setsom($som){
+      $this->som=$som;
+    }
+
+    public function getsom(){
+      return $this->som;
+    }
+
 
   }
 
@@ -27,23 +36,5 @@
       echo "Subindo na árvore";
     }
   }
-
-  $cachorro = new Cachorro();
-  $cachorro->nome = "Totó";
-  $cachorro->idade = "3 anos";
-  $cachorro->som = "Au! Au!";
-  $cachorro->Correr();
-
-  $cavalo = new Cavalo();
-  $cavalo->nome = "Zorro";
-  $cavalo->idade = "10 anos";
-  $cavalo->som = "som do relincho";
-  $cavalo->Correr();
-
-  $preguica = new Preguica();
-  $preguica->nome = "Finnick";
-  $preguica->idade = "1 ano";
-  $preguica->som = "zzzzz";
-  $preguica->SobeNaArvore();
   
 ?>
