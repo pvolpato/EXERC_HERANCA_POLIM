@@ -6,13 +6,40 @@
     public $idade;
     public $som;
 
+    public function __construct($nome, $idade, $som){
+      $this->nome=$nome;
+      $this->idade=$idade;
+      $this->som=$som;
+    }
+
+    public function EmitirSom(){
+      echo "O som que o animal emite é $this->som";
+    }
+
     public function setsom($som){
       $this->som=$som;
+    }
+
+    public function setnome($nome){
+      $this->nome=$nome;
+    }
+
+    public function setidade($idade){
+      $this->idade=$idade;
     }
 
     public function getsom(){
       return $this->som;
     }
+
+    public function getnome(){
+      return $this->nome;
+    }
+
+    public function getidade(){
+      return $this->idade;
+    }
+
 
   }
 
@@ -23,7 +50,6 @@
 
     }
   
-
   class Cavalo extends Animal{
     public function Correr(){
       echo "Correndo";
@@ -36,26 +62,16 @@
     }
   }
 
-  $cachorro = new Cachorro();
-  $cachorro->nome = "Totó";
-  $cachorro->idade = "3 anos";
-  $cachorro->setsom("Au! Au!");
-  echo $cachorro->getsom();
+  $cachorro = new Cachorro("Totó", 3, "au au");
+  $cachorro->EmitirSom();
   echo "\n";
 
-  $cavalo = new Cavalo();
-  $cavalo->nome = "Zorro";
-  $cavalo->idade = "10 anos";
-  $cavalo->setsom("iiiiin hihihi");
-  echo $cavalo->getsom();
+  $cavalo = new Cavalo("Zorro", 10, "iiiin hihihii");
+  $cavalo->EmitirSom();
   echo "\n";
 
-
-  $preguica = new Preguica();
-  $preguica->nome = "Finnick";
-  $preguica->idade = "1 ano";
-  $preguica->setsom("zzzzz");
-  echo $preguica->getsom();
+  $preguica = new Preguica("Finnick", 1, "ZzZZzzZ");
+  echo $preguica->EmitirSom();
   echo "\n";
   
 ?>
