@@ -33,20 +33,17 @@
   $cachorro->idade = "3 anos";
   $cachorro->som = "Au! Au!";
   $cachorro->Correr();
-  var_dump($cachorro);
 
   $cavalo = new Cavalo();
   $cavalo->nome = "Zorro";
   $cavalo->idade = "10 anos";
   $cavalo->som = "som do relincho";
   $cavalo->Correr();
-  var_dump($cavalo);
 
   $preguica = new Preguica();
   $preguica->nome = "Finnick";
   $preguica->idade = "1 ano";
   $preguica->som = "zzzzz";
   $preguica->SobeNaArvore();
-  var_dump($preguica);
   
 ?>
