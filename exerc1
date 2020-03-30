@@ -1,0 +1,59 @@
+/*Implemente as classes representadas abaixo, utilizando os conceitos de herança e polimorfismo, 
+e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
+
+<?php
+  class Veiculo{
+    public $modelo;
+    public $velocidade;
+    public $passageiros;
+    public $combustivel;
+
+  }
+
+  class Carro extends Veiculo{
+    public $ano;
+    public $portas;
+  }
+
+  class Aviao extends Veiculo{
+    public $uso;
+    public $tipo;
+  }
+
+  $carro = new Carro();
+  $carro->modelo = "x";
+  $carro->velocidade = "60 km/h";
+  $carro->passageiros = 2;
+  $carro->combustivel = "gasolina";
+  $carro->ano = 2018;
+  $carro->portas = 2;
+  var_dump($carro);
+
+  $carro2 = new Carro();
+  $carro2->modelo = "y";
+  $carro2->velocidade = "40 km/h";
+  $carro2->passageiros = 1;
+  $carro2->combustivel = "gasolina";
+  $carro2->ano = 1990;
+  $carro2->portas = 2;
+  var_dump($carro2);
+
+  $aviao = new aviao();
+  $aviao->modelo = "w";
+  $aviao->velocidade = "650 km/h";
+  $aviao->passageiros = 15;
+  $aviao->combustivel = "querosene";
+  $aviao->uso = "comercial";
+  $aviao->tipo = "a jato";
+  var_dump($aviao);
+
+  $aviao2 = new aviao();
+  $aviao2->modelo = "z";
+  $aviao2->velocidade = "430 km/h";
+  $aviao2->passageiros = 10;
+  $aviao2->combustivel = "querosene";
+  $aviao2->uso = "pessoal";
+  $aviao2->tipo = "turboélice";
+  var_dump($aviao2);
+  
+?>
