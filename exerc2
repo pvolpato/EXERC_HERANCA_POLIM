@@ -59,17 +59,4 @@
       echo "Subindo na árvore";
     }
   }
-
-  $cachorro = new Cachorro("Totó", 3, "au au");
-  $cachorro->EmitirSom();
-  echo "\n";
-
-  $cavalo = new Cavalo("Zorro", 10, "iiiin hihihii");
-  $cavalo->EmitirSom();
-  echo "\n";
-
-  $preguica = new Preguica("Finnick", 1, "ZzZZzzZ");
-  echo $preguica->EmitirSom();
-  echo "\n";
-  
 ?>
