@@ -37,14 +37,6 @@
 
   }
 
-  class Vet{
-    public $nome;
-
-    public function Examinar(){
-      
-    }
-  }
-
   class Cachorro extends Animal{
     public function Correr(){
       echo "Correndo";
