@@ -36,7 +36,6 @@ e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
   $carro2->combustivel = "gasolina";
   $carro2->ano = 1990;
   $carro2->portas = 2;
-  var_dump($carro2);
 
   $aviao = new aviao();
   $aviao->modelo = "w";
@@ -45,7 +44,6 @@ e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
   $aviao->combustivel = "querosene";
   $aviao->uso = "comercial";
   $aviao->tipo = "a jato";
-  var_dump($aviao);
 
   $aviao2 = new aviao();
   $aviao2->modelo = "z";
@@ -54,6 +52,5 @@ e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
   $aviao2->combustivel = "querosene";
   $aviao2->uso = "pessoal";
   $aviao2->tipo = "turboélice";
-  var_dump($aviao2);
   
 ?>
