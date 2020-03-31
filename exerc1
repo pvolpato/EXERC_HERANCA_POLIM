@@ -1,5 +1,4 @@
-/*Implemente as classes representadas abaixo, utilizando os conceitos de herança e polimorfismo, 
-e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
+/* Priscila e Josie (t30) - ex 1 */
 
 <?php
   class Veiculo{
