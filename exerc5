@@ -1,52 +1,49 @@
+/* Priscila Volpato e Josie Reinaço - exercício 5 */
+
 <?php 
 
 class Imovel{
   public $endereco;
   public $preco;
+}
+
+class Novo extends Imovel{
+  public $adicional;
 
   public function __construct($endereco, $preco){
     $this->endereco=$endereco;
     $this->preco=$preco;
   }
 
-  public function setpreco($preco){
-    $this->preco=$preco;
-  }
-
-  public function setendereco($endereco){
-    $this->endereco=$endereco;
-  }
-
-  public function getendereco(){
-    return $this->endereco;
-  }
- 
-  public function getpreco(){
-    return $this->preco;
-  }
-}
-
-class Novo extends Imovel{
-
-  public function setpreco($preco){
-    $adicional=($preco*20)/100;
-    $this->preco+$adicional;
+  public function ajustepreco(){
+    $this->preco=$this->preco+(($this->preco*20)/100);
   }
 
 }
 
 class Velho extends Imovel{
-  public function getpreco(){
-    $desc=($preco*20)/100;
-    return $this->getpreco=$preco-$desc;
+  public $desc;
+
+  public function __construct($endereco, $preco){
+    $this->endereco=$endereco;
+    $this->preco=$preco;
+  }
+
+  public function descpreco(){
+    $this->preco=$this->preco-(($this->preco*20)/100); 
   }
 }
 
 $casa1 = new Novo("rua x", 100.000);
-echo $casa1->getpreco();
+echo "Esta casa está localizada em {$casa1->endereco} e originalmente vale R$ {$casa1->preco} \n";
+$casa1->ajustepreco();
+echo "O valor ajustado é de {$casa1->preco}";
+
 echo "\n";
 
 $casa2 = new Velho("rua Y", 100.000);
-echo $casa2->getpreco();
+echo "Esta casa está localizada em {$casa2->endereco} e originalmente vale R$ {$casa2->preco} \n";
+$casa2->descpreco();
+echo "O valor ajustado é de {$casa2->preco}";
 echo "\n";
 ?>
