@@ -1,3 +1,4 @@
+/* Priscila e Josie - ex 2 */
 <?php
   class Animal{
     public $nome;
