@@ -1,5 +1,3 @@
-/* exerc 4 */
-
 <?php
   class Animal{
     public $nome;
@@ -13,7 +11,7 @@
     }
 
     public function EmitirSom(){
-      echo "O som que o animal emite é $this->som";
+      echo "O som que o animal emite é $this->som.";
     }
 
     public function setsom($som){
@@ -43,10 +41,10 @@
   }
 
   class Vet{
-
-    public function Examinar(Animal){
-      echo "O animal foi examinado!";
-      echo "$this->som";
+    public $verdade;
+    public function Examinar($animal){
+      echo "O animal foi examinado! ";
+      $this->verdade=true;
     }
   }
 
@@ -69,19 +67,27 @@
     }
   }
 
+  $vet = new Vet;
   $cachorro = new Cachorro("Totó", 3, "au au");
-  $cachorro->EmitirSom();
+  $vet->Examinar($cachorro);
+    if ($vet->verdade==true){
+      $cachorro->EmitirSom();
+    }
   echo "\n";
 
   $cavalo = new Cavalo("Zorro", 10, "iiiin hihihii");
-  $cavalo->EmitirSom();
+  $vet->Examinar($cavalo);
+    if ($vet->verdade==true){
+      $cavalo->EmitirSom();
+    }
   echo "\n";
 
   $preguica = new Preguica("Finnick", 1, "ZzZZzzZ");
-  echo $preguica->EmitirSom();
+   $vet->Examinar($preguica);
+    if ($vet->verdade==true){
+      $preguica->EmitirSom();
+    }
   echo "\n";
 
-  $veterinario = new Vet;
-  $veterinario->Examinar($cachorro);
   
 ?>
