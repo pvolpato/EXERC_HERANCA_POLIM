@@ -34,14 +34,14 @@ class Velho extends Imovel{
   }
 }
 
-$casa1 = new Novo("rua x", 100.000);
+$casa1 = new Novo("rua x", 100000);
 echo "Esta casa está localizada em {$casa1->endereco} e originalmente vale R$ {$casa1->preco} \n";
 $casa1->ajustepreco();
 echo "O valor ajustado é de {$casa1->preco}";
 
 echo "\n";
 
-$casa2 = new Velho("rua Y", 100.000);
+$casa2 = new Velho("rua Y", 80000);
 echo "Esta casa está localizada em {$casa2->endereco} e originalmente vale R$ {$casa2->preco} \n";
 $casa2->descpreco();
 echo "O valor ajustado é de {$casa2->preco}";
