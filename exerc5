@@ -1,1 +1,52 @@
+<?php 
 
+class Imovel{
+  public $endereco;
+  public $preco;
+
+  public function __construct($endereco, $preco){
+    $this->endereco=$endereco;
+    $this->preco=$preco;
+  }
+
+  public function setpreco($preco){
+    $this->preco=$preco;
+  }
+
+  public function setendereco($endereco){
+    $this->endereco=$endereco;
+  }
+
+  public function getendereco(){
+    return $this->endereco;
+  }
+ 
+  public function getpreco(){
+    return $this->preco;
+  }
+}
+
+class Novo extends Imovel{
+
+  public function setpreco($preco){
+    $adicional=($preco*20)/100;
+    $this->preco+$adicional;
+  }
+
+}
+
+class Velho extends Imovel{
+  public function getpreco(){
+    $desc=($preco*20)/100;
+    return $this->getpreco=$preco-$desc;
+  }
+}
+
+$casa1 = new Novo("rua x", 100.000);
+echo $casa1->getpreco();
+echo "\n";
+
+$casa2 = new Velho("rua Y", 100.000);
+echo $casa2->getpreco();
+echo "\n";
+?>
