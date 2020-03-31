@@ -7,6 +7,10 @@ e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
     public $velocidade;
     public $passageiros;
     public $combustivel;
+    
+    public function setmodelo ($modelo){
+      $this->modelo=$modelo;
+    }
 
   }
 
@@ -37,7 +41,7 @@ e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
   $carro2->ano = 1990;
   $carro2->portas = 2;
 
-  $aviao = new aviao();
+  $aviao = new Aviao();
   $aviao->modelo = "w";
   $aviao->velocidade = "650 km/h";
   $aviao->passageiros = 15;
@@ -45,7 +49,7 @@ e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
   $aviao->uso = "comercial";
   $aviao->tipo = "a jato";
 
-  $aviao2 = new aviao();
+  $aviao2 = new Aviao();
   $aviao2->modelo = "z";
   $aviao2->velocidade = "430 km/h";
   $aviao2->passageiros = 10;
@@ -54,3 +58,167 @@ e demonstre a sua utilização implementando os 4 objetos ilustrados abaixo: */
   $aviao2->tipo = "turboélice";
   
 ?>
+
+/// tentativa 2
+
+<?php
+  class Veiculo{
+    public $modelo;
+    public $velocidade;
+    public $passageiros;
+    public $combustivel;
+    
+    public function setmodelo($modelo){
+      $this->modelo=$modelo;
+    }
+
+    public function setvelocidade($velocidade){
+      $this->velocidade=$velocidade;
+    }
+
+    public function setpassageiros($passageiros){
+      $this->passageiros=$passageiros;
+    }
+
+    public function setcombustivel($combustivel){
+      $this->combustivel=$combustivel;
+    }
+
+    public function getmodelo(){
+      return $this->modelo;
+    }
+
+    public function getvelocidade(){
+      return $this->velocidade;
+    }
+
+    public function getpassageiros(){
+      return $this->passageiros;
+    }
+
+    public function getcombustivel(){
+      return $this->combustivel;
+    }
+  }
+
+  class Carro extends Veiculo{
+    public $ano;
+    public $portas;
+
+    public function setano($ano){
+      $this->ano=$ano;
+    }
+
+    public function setportas($portas){
+      $this->portas=$portas;
+    }
+
+    public function getano(){
+      return $this->ano;
+    }
+
+    public function getportas(){
+      return $this->portas;
+    }
+  }
+
+  class Aviao extends Veiculo{
+    public $uso;
+    public $tipo;
+
+    public function setuso($uso){
+      $this->uso=$uso;
+    }
+    public function settipo($tipo){
+      $this->tipo=$tipo;
+    }
+
+    public function getuso(){
+      return $this->uso;
+    }
+
+    public function gettipo(){
+      return $this->tipo;
+    }
+  }
+
+  $carro = new Carro();
+  $carro->setmodelo=("x");
+  $carro->setvelocidade=("60 km/h");
+  $carro->setpassageiros=(2);
+  $carro->setcombustivel=("gasolina");
+  $carro->setano = (2018);
+  $carro->setportas =(2);
+  echo $carro->getmodelo();
+  echo "\n";
+  echo $carro->getvelocidade();
+  echo "\n";
+  echo $carro->getpassageiros();
+  echo "\n";
+  echo $carro->getcombustivel();
+  echo "\n";
+  echo $carro->getano();
+  echo "\n";
+  echo $carro->getportas();
+
+  $carro2 = new Carro();
+  $carro2->setmodelo=("y");
+  $carro2->setvelocidade=("40 km/h");
+  $carro2->setpassageiros=(1);
+  $carro2->setcombustivel=("gasolina");
+  $carro2->setano = 1990;
+  $carro2->setportas = 2;
+  echo $carro2->getmodelo();
+  echo "\n";
+  echo $carro2->getvelocidade();
+  echo "\n";
+  echo $carro2->getpassageiros();
+  echo "\n";
+  echo $carro2->getcombustivel();
+  echo "\n";
+  echo $carro2->getano();
+  echo "\n";
+  echo $carro2->getportas();
+
+
+  $aviao = new Aviao();
+  $aviao->setmodelo=("w");
+  $aviao->setvelocidade = ("650 km/h");
+  $aviao->setpassageiros = (15);
+  $aviao->setcombustivel = ("querosene");
+  $aviao->setuso = ("comercial");
+  $aviao->settipo = ("a jato");
+  echo $aviao->getmodelo();
+  echo "\n";
+  echo $aviao->getvelocidade();
+  echo "\n";
+  echo $aviao->getpassageiros();
+  echo "\n";
+  echo $aviao->getcombustivel();
+  echo "\n";
+  echo $aviao->getuso();
+  echo "\n";
+  echo $aviao->gettipo();
+
+  $aviao2 = new Aviao();
+  $aviao2->setmodelo = ("z");
+  $aviao2->setvelocidade = ("430 km/h");
+  $aviao2->setpassageiros = (10);
+  $aviao2->setcombustivel = ("querosene");
+  $aviao2->setuso = ("pessoal");
+  $aviao2->settipo = ("turboélice");
+  echo $aviao2->getmodelo();
+  echo "\n";
+  echo $aviao2->getvelocidade();
+  echo "\n";
+  echo $aviao2->getpassageiros();
+  echo "\n";
+  echo $aviao2->getcombustivel();
+  echo "\n";
+  echo $aviao2->getuso();
+  echo "\n";
+  echo $aviao2->gettipo();
+  
+  
+?>
+
